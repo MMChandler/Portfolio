@@ -1,0 +1,178 @@
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective-origin-x: 100%;
+}
+
+.parallax_layer {
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding-left: 6em;
+  padding-top: 25em;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+.parallax_layer_base {
+  padding-top: 10em;
+  font-size: 2em;
+  transform: translateZ(-1px);
+}
+
+.parallax_layer_back {
+  transform: translateZ(-2px) scale(2);
+}
+
+.parallax_layer_top {
+  transform: translateZ(-2px) scale(3);
+  top: 8em;
+}
+
+.parallax_layer_top2 {
+  padding-top: 30em;
+  transform: translateZ(-4px) scale(4);
+}
+/* 
+  ----------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 100% / 1.5 Arial;
+  background: url('https://farm1.staticflickr.com/635/22878213724_4f96159d71_k.jpg') no-repeat 50% 50% fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+}
+
+.parallax {
+  font-size: 200%;
+}
+/* add some padding to force scrollbars */
+
+.parallax__layer {
+  padding: 100vh 0;
+}
+.parallax_layer_back {
+  margin-top: 5em;
+}
+
+.works {
+  color: white;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  font-size: 14px;
+  text-align: center;
+  bottom: 0;
+  margin-top: 0;
+}
+/* center the content in the parallax layers */
+
+.title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+/*affix the sidebar to the left side of the screen*/
+
+#sidebar {
+  color: white;
+  position: fixed;
+  top: 12vh;
+  left: 0;
+  bottom: 0;
+  width: 15vw;
+  opacity: .85;
+}
+
+#sidebar p a {
+  color: white;
+  hover: opacity .75;
+  margin-top: 15vh;
+  height: 65vh;
+  font-size: 10vh;
+  margin-left: 0.5em;
+  opacity: 0.8;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+span img {
+  border: .001px solid black;
+  border-radius: 10%;
+  margin-left: 8em;
+  margin-top: -2em;
+  box-shadow: 1px 1px 2px black, 0 0 5px darkblue;
+  opacity: .78;
+}
+
+#copyright {
+  position: fixed;
+  bottom: .65em;
+  left: .75em;
+  margin-left: 0;
+  font-size: 12px;
+}
+
+table,
+tr {
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+  top: 15%;
+  background-color: black;
+  padding: 3em;
+}
+table {
+  border-left: 1px solid gray;
+  margin-left: 15em;
+}
+td img{
+  border: .1px solid gray;
+  border-radius: 25%;
+}
+td {
+  padding: 2em;
+  opacity: .85;
+}
+#contact a{
+  position: fixed;
+  bottom: 2em;
+  right: 4em;
+  color: white;
+}
+
+
+/* mouse over link */
+#sidebar:hover {
+  opacity: 1; 
+  
+}
+#sidebar a:hover{
+  color: lightblue;
+}
+td a:hover{
+  opacity: 1;
+  background-color: lightblue;
+}
+#contact a:hover {
+  color: lightblue;
+}
+#contact a {
+  text-decoration: none;
+  border-radius: 10%;
+  background-color: black;
+  opacity: .75;
+}
